@@ -61,6 +61,7 @@ js/resistor-logic.js, smd-logic.js, cap-logic.js, ind-logic.js,
 js/passive-logic.js, xtal-logic.js   decoding logic, no dependencies
 js/parts-data.js  the semiconductor database
 SOURCES.md        where the tables and values were checked
+LICENSE, NOTICE   Apache License 2.0 and the required attribution notices
 wiki/             the User Guide pages (published to the GitHub wiki)
 ```
 
@@ -76,7 +77,7 @@ Corrections are welcome, especially with a datasheet or standard cited. Open an 
 
 ## License
 
-[TMWB Attribution License (MIT-based)](LICENSE). Free for commercial and non-commercial use, and you can modify it and add to it. The license and the attribution line "Developed and Maintained by TheMakersWorkbench.com" (with its link) must stay intact and visible in every copy or derivative.
+[Apache License 2.0](LICENSE), with attribution notices in the [NOTICE](NOTICE) file. Free for commercial and non-commercial use, and you can modify it and add to it. You must include a copy of the license, keep the copyright and attribution notices (including the NOTICE contents), and mark files you changed. Please also keep the "Developed and Maintained by TheMakersWorkbench.com" footer and project links visible.
 
 ## Credits
 

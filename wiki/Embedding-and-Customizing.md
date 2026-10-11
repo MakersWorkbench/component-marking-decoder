@@ -1,6 +1,6 @@
 # Embedding and Customizing
 
-The tool is plain HTML, CSS, and JavaScript with no build step and no dependencies, so it is easy to host, embed, and modify. The one rule is that the attribution and license stay intact (see [License](License)).
+The tool is plain HTML, CSS, and JavaScript with no build step and no dependencies, so it is easy to host, embed, and modify. The conditions are small: keep the license, the copyright and attribution notices, and the NOTICE contents with it, and mark the files you changed (see [License](License)).
 
 ## How do I run it locally?
 
@@ -46,7 +46,7 @@ Tab ids: `res` (Resistor Bands), `smd` (SMD Resistor), `pot`, `net`, `cap`, `tca
 
 ## How do I change the title, description, and links?
 
-Open `js/app.js` and edit the `APP` block near the bottom (the project information). It holds the name, intro paragraph, site, repository, wiki, and license links. If you fork the project, point the repository and wiki links at your fork, but keep the "Developed and Maintained by TheMakersWorkbench.com" attribution and the original project link as the license requires.
+Open `js/app.js` and edit the `APP` block near the bottom (the project information). It holds the name, intro paragraph, site, repository, wiki, and license links. If you fork the project, point the repository and wiki links at your fork, but keep the "Developed and Maintained by TheMakersWorkbench.com" attribution and the original project link, which carries the NOTICE attribution.
 
 ## How do I add a part to the semiconductor list?
 
@@ -71,7 +71,7 @@ const r = C.decode('107C');
 console.log(C.format(r.pf), r.voltage, r.kind); // 100 µF 16 tantalum
 ```
 
-Any copy or derivative must keep the license and attribution.
+Any copy or derivative must keep the license and the NOTICE attribution.
 
 ## How do I contribute?
 

@@ -1,3 +1,4 @@
+/* Copyright 2026 TheMakersWorkbench.com. Licensed under the Apache License, Version 2.0. See LICENSE and NOTICE. */
 /* TMWB part lookup data. Typical values only: always confirm against the manufacturer datasheet.
    Entry: {id, aliases[], cat, title, pkg, polarity|pinout, specs:[[label,value]], use, notes} */
 (function (root) {

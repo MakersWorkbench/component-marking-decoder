@@ -2,7 +2,7 @@
 
 ## Is it free?
 
-Yes. It is free for personal, educational, and commercial use. See [License](License) for the one requirement (keeping the attribution).
+Yes. It is free for personal, educational, and commercial use. It uses the Apache License 2.0. See [License](License) for the conditions (keeping the license, the copyright and attribution notices, and the NOTICE contents).
 
 ## Does it work on my phone?
 
@@ -30,15 +30,15 @@ You can request it by opening an issue, or add it yourself. Entries live in `js/
 
 ## Can I put it on my own website?
 
-Yes, for commercial and non-commercial sites. You must keep the attribution line and the license intact and visible. See [License](License) and [Embedding and Customizing](Embedding-and-Customizing).
+Yes, for commercial and non-commercial sites. You must include the Apache 2.0 license and keep the copyright and NOTICE attribution notices, and we ask that you keep the footer attribution visible. See [License](License) and [Embedding and Customizing](Embedding-and-Customizing).
 
 ## Can I change it and add features?
 
-Yes. Modifying and adding are allowed. The attribution and license must remain, and you can add your own credit alongside them.
+Yes. Modifying and adding are allowed. The license, the copyright and attribution notices, and the NOTICE contents must remain, you should mark files you changed, and you can add your own credit alongside them.
 
 ## Why do I see the attribution footer even in a single-tab view?
 
-The attribution is required by the license, so it stays visible in every view, including the one-tab embed.
+The footer credit is how people trace the tool back to its source and find the User Guide, so it stays visible in every view, including the one-tab embed. We ask that you keep it if you host the tool.
 
 ## How do I report a bug or a wrong value?
 

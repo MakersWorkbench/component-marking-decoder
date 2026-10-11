@@ -1,3 +1,4 @@
+/* Copyright 2026 TheMakersWorkbench.com. Licensed under the Apache License, Version 2.0. See LICENSE and NOTICE. */
 /* TMWB Component Decoder UI. Layout inspired by VoxelCubes/ResistorDecoder (GPL-3, no code reused). */
 (function () {
   'use strict';
@@ -727,7 +728,7 @@
     repo: 'https://github.com/MakersWorkbench/component-marking-decoder',
     wiki: 'https://github.com/MakersWorkbench/component-marking-decoder/wiki',
     license: 'https://github.com/MakersWorkbench/component-marking-decoder/blob/main/LICENSE',
-    licenseName: 'TMWB Attribution License (MIT-based)'
+    licenseName: 'Apache License 2.0'
   };
   function link(href, text) { return '<a href="' + href + '" target="_blank" rel="noopener">' + text + '</a>'; }
 
@@ -741,7 +742,7 @@
       '<h3>Accuracy</h3>' +
       '<p>Tables and values were checked against manufacturer datasheets, distributor references, and published standards, and the sources are listed in the ' + link(APP.repo + '/blob/main/SOURCES.md', 'sources file') + '. Marking codes, pinouts, and some ratings still differ between manufacturers, so the app says so wherever that matters. Tolerances read from SMD markings are estimates. For anything that matters, measure the part and confirm with the manufacturer datasheet.</p>' +
       '<h3>License</h3>' +
-      '<p>' + link(APP.license, APP.licenseName) + ': free to use, copy, modify, and distribute, for commercial and non-commercial purposes. You may change and add to it, as long as the license stays intact and the attribution line "Developed and Maintained by TheMakersWorkbench.com" (with its link) stays visible and unaltered in every copy or derivative.</p>' +
+      '<p>' + link(APP.license, APP.licenseName) + ': free to use, copy, modify, and distribute, for commercial and non-commercial purposes, and it includes a patent grant. You may change it and add to it. The conditions: include a copy of the license, keep the copyright and attribution notices (listed in the ' + link(APP.repo + '/blob/main/NOTICE', 'NOTICE file') + '), and mark any files you changed. Please also keep the "Developed and Maintained by TheMakersWorkbench.com" footer and project links visible, so people can trace the tool back to its source.</p>' +
       '<h3>Developed and maintained by TheMakersWorkbench.com</h3>' +
       '<p>' + link(APP.repo, 'View the Project on GitHub') + ' (source code, issues, and contributions) &middot; ' + link(APP.wiki, 'User Guide (Wiki)') + ' &middot; ' + link(APP.workbench, 'More tools in the Virtual Workbench') + '.</p>' +
       '<p class="note">The layout is inspired by the desktop app ' + link('https://github.com/VoxelCubes/ResistorDecoder', 'ResistorDecoder') + ' by VoxelCubes. This is an independent implementation, with no code copied.</p></div>';

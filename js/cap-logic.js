@@ -1,3 +1,4 @@
+/* Copyright 2026 TheMakersWorkbench.com. Licensed under the Apache License, Version 2.0. See LICENSE and NOTICE. */
 /* TMWB Capacitor code logic. No dependencies. Values are carried in picofarads. */
 (function (root) {
   'use strict';

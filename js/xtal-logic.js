@@ -1,3 +1,4 @@
+/* Copyright 2026 TheMakersWorkbench.com. Licensed under the Apache License, Version 2.0. See LICENSE and NOTICE. */
 /* TMWB Crystal / resonator / oscillator marking logic. No dependencies. Frequencies are carried in hertz. */
 (function (root) {
   'use strict';

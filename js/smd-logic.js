@@ -1,3 +1,4 @@
+/* Copyright 2026 TheMakersWorkbench.com. Licensed under the Apache License, Version 2.0. See LICENSE and NOTICE. */
 /* TMWB SMD Resistor Decoder logic. No dependencies. */
 (function (root) {
   'use strict';
