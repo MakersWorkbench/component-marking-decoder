@@ -4,6 +4,10 @@
   'use strict';
   var R = ResistorLogic, S = SMDLogic, C = CapLogic, I = IndLogic, X = XtalLogic, PARTS = PartsData.PARTS;
   var root = document.getElementById('tmwb-dec');
+  if (!root) return;   /* nothing to mount on (for example a page without the tool) */
+  /* Optional embed settings on the mount element: data-heading="h2" (heading level of the title), data-hash="off" (do not read or write the URL hash), data-solo="on" */
+  var HEADING = /^h[1-6]$/.test(root.getAttribute('data-heading') || '') ? root.getAttribute('data-heading') : 'h1';
+  var USE_HASH = root.getAttribute('data-hash') !== 'off';
 
   /* ---------- helpers ---------- */
   function esc(t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
@@ -744,7 +748,7 @@
       '<h3>License</h3>' +
       '<p>' + link(APP.license, APP.licenseName) + ': free to use, copy, modify, and distribute, for commercial and non-commercial purposes, and it includes a patent grant. You may change it and add to it. The conditions: include a copy of the license, keep the copyright and attribution notices (listed in the ' + link(APP.repo + '/blob/main/NOTICE', 'NOTICE file') + '), and mark any files you changed. Please also keep the "Developed and Maintained by TheMakersWorkbench.com" footer and project links visible, so people can trace the tool back to its source.</p>' +
       '<h3>Developed and maintained by TheMakersWorkbench.com</h3>' +
-      '<p>' + link(APP.repo, 'View the Project on GitHub') + ' (source code, issues, and contributions) &middot; ' + link(APP.wiki, 'User Guide (Wiki)') + ' &middot; ' + link(APP.workbench, 'More tools in the Virtual Workbench') + '.</p>' +
+      '<p>' + link(APP.repo, 'View the Project on GitHub') + ' (source code, issues, and contributions) &middot; ' + link(APP.wiki, 'User Guide (Wiki)') + '.</p>' +
       '<p class="note">The layout is inspired by the desktop app ' + link('https://github.com/VoxelCubes/ResistorDecoder', 'ResistorDecoder') + ' by VoxelCubes. This is an independent implementation, with no code copied.</p></div>';
   }
 
@@ -754,26 +758,24 @@
     '<rect x="8" y="34" width="56" height="5" rx="2.5" fill="#9aa3ad"/>' +
     '<path d="M20 25 Q14 25 14 31 L14 42 Q14 48 20 48 L24 48 Q27 44 31 44 L41 44 Q45 44 48 48 L52 48 Q58 48 58 42 L58 31 Q58 25 52 25 L48 25 Q45 29 41 29 L31 29 Q27 29 24 25 Z" fill="#e3cb98"/>' +
     '<rect x="21" y="25" width="5" height="23" fill="#f6d90b"/><rect x="30" y="29" width="5" height="15" fill="#7a3fb5"/><rect x="39" y="29" width="5" height="15" fill="#d62828"/><rect x="50" y="25" width="5" height="23" fill="#cfa72a"/></svg>';
-  var CHIPS = ['Resistors', 'Capacitors', 'Inductors', 'Diodes &amp; transistors', 'Crystals', 'Fuses &amp; protection'];
   root.innerHTML =
     '<header class="dec-head"><div class="dec-hero">' + LOGO +
-    '<div class="dec-titlewrap"><div class="dec-eyebrow">The Makers Workbench &middot; Free Tool</div><h1>' + esc(APP.name) + '</h1>' +
+    '<div class="dec-titlewrap"><div class="dec-eyebrow">The Makers Workbench &middot; Free Tool</div><' + HEADING + ' class="dec-title">' + esc(APP.name) + '</' + HEADING + '>' +
     '<div class="dec-tag">Decode the colors, numbers, and markings on electronic parts.</div></div></div>' +
     '<p class="dec-intro">' + esc(APP.intro) + '</p>' +
-    '<div class="dec-chips">' + CHIPS.map(function (c) { return '<span>' + c + '</span>'; }).join('') + '</div>' +
-    '<nav class="dec-links">' + link(APP.wiki, 'User Guide (Wiki)').replace('<a ', '<a class="dec-btn dec-btn-primary" ') + link(APP.repo, 'GitHub').replace('<a ', '<a class="dec-btn" ') + link(APP.workbench, 'Virtual Workbench').replace('<a ', '<a class="dec-btn" ') + '</nav></header>' +
+    '<nav class="dec-links">' + link(APP.wiki, 'User Guide (Wiki)').replace('<a ', '<a class="dec-btn dec-btn-primary" ') + link(APP.repo, 'GitHub').replace('<a ', '<a class="dec-btn" ') + '</nav></header>' +
     '<div class="tabbar" role="tablist"></div><div class="pane" role="tabpanel"></div>' +
     '<footer class="dec-foot">Developed and Maintained by ' + link(APP.site, 'TheMakersWorkbench.com') + ' &middot; ' + link(APP.license, APP.licenseName) + ' &middot; ' + link(APP.repo, 'View the Project on GitHub') + ' &middot; ' + link(APP.wiki, 'User Guide') + '</footer>';
   var bar = $('.tabbar'), pane = $('.pane');
-  var solo = /[?&]solo/.test(location.search);
-  if (solo) { bar.hidden = true; ['.dec-intro', '.dec-chips', '.dec-links'].forEach(function (q) { $(q).hidden = true; }); }   /* the title and footer attribution always stay */
+  var solo = /[?&]solo/.test(location.search) || root.getAttribute('data-solo') === 'on';
+  if (solo) { bar.hidden = true; ['.dec-intro', '.dec-links'].forEach(function (q) { $(q).hidden = true; }); }   /* the title and footer attribution always stay */
   bar.innerHTML = TABS.map(function (t) { return '<button role="tab" data-t="' + t[0] + '">' + t[1] + '</button>'; }).join('');
   function show(id) {
     var t = TABS.filter(function (x) { return x[0] === id; })[0] || TABS[0];
     bar.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-selected', b.getAttribute('data-t') === t[0]); });
     pane.innerHTML = ''; t[2](pane);
-    try { history.replaceState(null, '', '#' + t[0]); } catch (e) { /* embedded or file context */ }
+    if (USE_HASH) { try { history.replaceState(null, '', '#' + t[0]); } catch (e) { /* embedded or file context */ } }
   }
   bar.onclick = function (e) { var b = e.target.closest('[data-t]'); if (b) show(b.getAttribute('data-t')); };
-  show((location.hash || '').replace('#', ''));
+  show(USE_HASH ? (location.hash || '').replace('#', '') : '');
 })();
