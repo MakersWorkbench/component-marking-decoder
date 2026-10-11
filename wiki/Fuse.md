@@ -34,11 +34,17 @@ The highest voltage the fuse can safely interrupt. It is not an operating settin
 
 ## How do I use the tab?
 
+![Fuse tab decoding T2AL250V](images/fuse.png)
+*T2AL250V is a 2 A time-lag fuse, 250 V, low breaking capacity.*
+
 1. Click **Fuse**.
 2. Type the marking, for example `T2A 250V`, `F500mA 250V`, `T2AL250V`, `FF1A 125V`, `MF-R110`, or `1812L110/16`.
 3. Read the current rating, speed, meaning, voltage, and breaking capacity.
 
 ## What about resettable fuses?
+
+![Fuse tab decoding the resettable fuse MF-R110](images/fuse-resettable.png)
+*MF-R110 is a resettable fuse with a 1.1 A hold current and about 2.2 A trip current.*
 
 Resettable fuses (also called polyfuses or PTC fuses) do not blow. They heat up and switch to high resistance during an overload, then reset after the fault is removed and they cool down.
 

@@ -48,11 +48,17 @@ You may also see `K` or `M` used the same way, such as `4K7` for 4.7 kΩ.
 
 ## How do I use the tab?
 
+![SMD Resistor tab decoding the EIA-96 code 01C](images/smd-resistor-eia96.png)
+*The chip picture shows your code. 01C is an EIA-96 code for 10 kΩ ±1%, with the working below.*
+
 1. Click **SMD Resistor**.
 2. Type the marking in the box. The black chip picture updates to show your code.
 3. Read **Resistance**, **Minimum**, **Maximum**, **Type**, and **Tolerance**. The numbered working shows how the code was read.
 
 ## Gotchas
+
+![SMD Resistor tab showing both readings of 47R](images/smd-resistor-47r.png)
+*An ambiguous marking like 47R shows both readings: EIA-96 (3.01 Ω) and R notation (47 Ω).*
 
 - **`47R` is ambiguous.** It can be an EIA-96 code (3.01 Ω) or 47 Ω in R notation. The tool shows both readings. If you cannot tell, measure it.
 - **Tolerance is an estimate.** Most SMD markings do not encode tolerance. The tool gives the typical tolerance for that style and says so.

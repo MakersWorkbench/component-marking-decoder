@@ -8,6 +8,9 @@ Unlike a fixed capacitor, a trimmer does not have one value. It has a range, and
 
 ## How do I use the tab?
 
+![Trimmer Cap tab decoding a 5-30 pF range](images/trimmer-capacitor.png)
+*Type the printed range to see the minimum, maximum, and midpoint.*
+
 1. Click **Trimmer Cap**.
 2. Type the printed range, such as `5-30`, `2-10pF`, `10~40`, or `3.5-20pF`.
 3. Read **Range**, **Minimum**, **Maximum**, and **Midpoint**.

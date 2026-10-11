@@ -15,6 +15,9 @@ Some parts also carry a tolerance letter (F = ±1%, G = ±2%, J = ±5%, K = ±10
 
 ## How do I use the tab?
 
+![Res. Network tab with a bussed 9-pin network](images/resistor-network.png)
+*Choose bussed or isolated and the pin count. The results include what to expect with a meter.*
+
 1. Click **Res. Network**.
 2. Choose **Bussed** or **Isolated**, and the pin count (6, 8, 9, or 10 pins) to match your part.
 3. Type the marking, for example `103`, `472`, or `A103G`.

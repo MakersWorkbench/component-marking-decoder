@@ -148,7 +148,7 @@
     if (Math.abs(hz - 10.7e6) < 1e4) {
       out.family = out.family || 'FM radio IF filter (10.7 MHz)';
       out.dots = FILTER_DOT;
-      notes.push('10.7 MHz filters are graded by center frequency, shown by a colored dot, so you can pick the best match for your receiver. Pick the dot color below to see the center frequency. The grades are 30 kHz apart (10.64, 10.67, 10.70, 10.73, 10.76 MHz, per Murata SFE10.7MA catalog data), and the exact tolerance per grade is listed in the maker datasheet.');
+      notes.push('10.7 MHz filters are graded by center frequency, shown by a colored dot, so you can pick the best match for your receiver. Pick the dot color to see the center frequency. The grades are 30 kHz apart (10.64, 10.67, 10.70, 10.73, 10.76 MHz, per Murata SFE10.7MA catalog data), and the exact tolerance per grade is listed in the maker datasheet.');
     } else if (Math.abs(hz - 455e3) < 5e3) {
       out.family = out.family || 'AM radio IF filter (455 kHz)';
       notes.push('455 kHz filters come in several bandwidth grades (wide for music, narrow for communication receivers), marked by a letter or color that differs between makers. Check the datasheet for the grade you have.');

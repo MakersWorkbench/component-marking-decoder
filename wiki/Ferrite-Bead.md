@@ -14,6 +14,9 @@ Most small SMD beads are **unmarked**, so this tab is most useful for printed co
 
 ## How do I use the tab?
 
+![Ferrite Bead tab decoding BLM18AG601SN1](images/ferrite-bead.png)
+*A Murata BLM18AG601SN1 is a 0603 bead with 600 Ω impedance at 100 MHz.*
+
 1. Click **Ferrite Bead**.
 2. Type the code or part number, for example `601`, `121`, `600R`, `BLM18AG601SN1`, or `BLM21PG221SN1`.
 3. Read **Impedance at 100 MHz** and, for BLM parts, the **Package size**.

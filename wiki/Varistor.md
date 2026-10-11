@@ -15,6 +15,9 @@ Another style, from TDK/EPCOS, is `S14K275`: a 14 mm disc, K = ±10%, and **275 
 
 ## How do I use the tab?
 
+![Varistor tab decoding 14D471K](images/varistor.png)
+*14D471K is a 14 mm, 470 V varistor rated 300 V AC and 385 V DC.*
+
 1. Click **Varistor**.
 2. Type the marking, for example `14D471K`, `10D391K`, `7N271K`, `20D561K`, or `S14K275`.
 3. Read the results: varistor voltage, disc size, maximum AC and DC working voltage, clamping range, and whether it suits 120 V or 230 V mains.

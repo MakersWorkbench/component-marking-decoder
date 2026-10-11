@@ -20,6 +20,9 @@ A pot's marking has two parts: the total resistance and a letter for the **taper
 
 ## How do I use the tab?
 
+![Pot / Trimmer tab decoding B103](images/pot-b103.png)
+*B103 is a 10 kΩ potentiometer with a linear taper.*
+
 1. Click **Pot / Trimmer**.
 2. Choose **Panel pot** or **Multi-turn trimmer** to match what you have (this changes the picture and the typical tolerance).
 3. Type the marking, for example `B103`, `A504`, `10KB`, `B50K`, or `3296W-103`.

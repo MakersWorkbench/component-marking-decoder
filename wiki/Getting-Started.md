@@ -4,6 +4,9 @@ This is the two-minute tour. By the end you will have decoded a resistor, a capa
 
 ## What am I looking at?
 
+![The Component Marking Decoder with a 4-band resistor selected](images/overview.png)
+*The whole tool: the title and description, the two rows of tabs, a labeled picture of the part, the controls, and the results.*
+
 When you open the tool you see a title, a short description, and a grid of tabs in two rows. Each tab is for one kind of part. Under the tabs is the main area, which always has the same layout:
 
 1. **A picture of the part**, labeled, so you know you picked the right tab.
@@ -14,6 +17,9 @@ When you open the tool you see a title, a short description, and a grid of tabs 
 Many tabs have a row of **Try** buttons. Click one to fill in a real example and see what the result looks like.
 
 ## How do I read a resistor with colored stripes?
+
+![Resistor Bands tab showing yellow, violet, red, brown](images/resistor-4band.png)
+*Yellow, violet, red, brown on a 4-band resistor gives 4.7 kΩ ±1%.*
 
 1. Click the **Resistor Bands** tab.
 2. Choose how many stripes your resistor has: **3 Band**, **4 Band**, **5 Band**, or **6 Band**.
@@ -30,6 +36,9 @@ Click **Value → Bands** and type a value such as `4.7kΩ 1%`. The tool shows t
 
 ## How do I read a number printed on a small part?
 
+![Capacitor tab decoding 104K](images/capacitor-104k.png)
+*Typing 104K on the Capacitor tab gives 100 nF ±10%, with the working underneath.*
+
 1. Click the tab for your part (for example **Capacitor**).
 2. Type exactly what is printed, for example `104K`.
 3. Read the results, then check the working below them.
@@ -37,6 +46,9 @@ Click **Value → Bands** and type a value such as `4.7kΩ 1%`. The tool shows t
 Try this: on the **Capacitor** tab, type `104K`. You get 100 nF, ±10%. The working explains that the first two digits (10) are the value, the third digit (4) means add four zeros, which is 100,000 pF, and the letter K means ±10%.
 
 ## How do I look up a diode or transistor?
+
+![Semiconductors tab showing the BAT54 Schottky diode](images/semiconductors-bat54.png)
+*The Semiconductors tab shows polarity, package, ratings, and typical use.*
 
 1. Click **Semiconductors**.
 2. Type the part number, such as `1N4007`, `BC547`, or `IRF540N`. You can also type a short marking printed on an SMD part, such as `L4` or `A7`.

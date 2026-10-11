@@ -7,6 +7,8 @@ Read the codes, colors, and markings printed on electronic parts. Pick the tab f
 
 Developed and maintained by [TheMakersWorkbench.com](https://www.themakersworkbench.com).
 
+![The Component Marking Decoder showing a 4-band resistor](wiki/images/overview.png)
+
 ## What can it decode?
 
 | Tab | What it reads |

@@ -21,6 +21,9 @@ An inductor is a coil of wire that stores energy in a magnetic field. This tab d
 
 ## What do the number codes mean?
 
+![Inductor tab decoding 473J on a round SMD power inductor](images/inductor-number-code.png)
+*473J is 47 mH ±5%. Choose the picture that matches your part.*
+
 Most inductor codes are in **microhenries (µH)**.
 
 - **3 digits:** the first two are the value and the third is the number of zeros. `101` = 100 µH. `102` = 1,000 µH = 1 mH. `473` = 47,000 µH = 47 mH.
@@ -32,6 +35,9 @@ Most inductor codes are in **microhenries (µH)**.
 Choose the picture style (**SMD power (round)**, **SMD shielded (block)**, or **Chip**) to match what you are holding.
 
 ## How do color bands work?
+
+![Inductor tab with red, black, brown, gold bands](images/inductor-color-bands.png)
+*Red, black, brown, gold is 200 µH ±5%.*
 
 Axial inductors (the ones shaped like a resistor) use color bands, with the answer in µH:
 
@@ -47,6 +53,9 @@ The digits use the resistor color codes. For the multiplier, black is x1, brown 
 A wider first band, or a silver first band, can mark a military-spec part.
 
 ## How do marking dots work?
+
+![Inductor tab with yellow, blue, red marking dots](images/inductor-marking-dots.png)
+*Yellow, blue, red dots read as 4,600 nH (4.6 µH). The identifier dot marks where to start.*
 
 Some small SMD and RF inductors have colored dots instead of printed text. One dot, a different color or marked as the identifier, shows the start. Read the others clockwise from it:
 

@@ -19,6 +19,9 @@ The **B value (beta)** describes how steeply the resistance changes with tempera
 
 ## How do I use the tab?
 
+![Thermistor tab with a 10 kΩ NTC at 60 °C](images/thermistor.png)
+*A 10 kΩ NTC (103) with beta 3950 reads about 2.49 kΩ at 60 °C, with a table for other temperatures.*
+
 1. Click **Thermistor**.
 2. Type the marking, for example `103`, `NTC 10K B3950`, `103AT-2`, `502 3435`, `10D-9`, or `PTC 120R`.
 3. Enter a **temperature in °C** to look up the resistance at that temperature (for example 60).

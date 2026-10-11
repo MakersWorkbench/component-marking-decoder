@@ -4,6 +4,9 @@ This tab is a lookup, not a calculator. Type a part number and it shows what the
 
 ## How do I use the tab?
 
+![Semiconductors tab showing the BAT54](images/semiconductors-bat54.png)
+*Type a part number, pick the match, and read the detail card.*
+
 1. Click **Semiconductors**.
 2. Type a part number, such as `1N4007`, `SS34`, `BAT54`, `BC547`, `IRF540N`, `7805`, `LM317`, or `555`. Dashes and spaces are ignored, and the tool matches on part and family names.
 3. You can also type the short code printed on a surface-mount (SMD) part, such as `L4`, `A7`, `M7`, or `1AM`.
@@ -25,9 +28,15 @@ The card has a **Polarity** row. For most leaded diodes, the **band** is the **c
 
 ## How do I read a TO-92 transistor pinout?
 
+![Semiconductors tab showing the BC547 transistor](images/semiconductors-transistor.png)
+*The BC547 card lists the pinout for each manufacturer, because the order differs between makers.*
+
 Hold the part with the flat face toward you and the legs pointing down. Read the legs left to right. The card spells out the order, for example "E, B, C" for emitter, base, collector.
 
 ## What are SMD marking codes?
+
+![Semiconductors tab searching for the SMD marking L4](images/semiconductors-smd-marking.png)
+*Searching for the marking L4 finds the BAT54 Schottky diode.*
 
 A tiny SOT-23 transistor or diode has room for only a code, not the full part number. For example `L4` is a BAT54 Schottky diode, `A7` is a BAV99, `1AM` is a common MMBT3904 marking, and `T4` is a 1N4148W. You can search by that code. The card shows the **SMD marking** row.
 

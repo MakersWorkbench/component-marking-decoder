@@ -46,4 +46,7 @@ This tool does the lookup for you, shows you a labeled picture of the part, and 
 
 ## Who makes this?
 
+![The About tab of the Component Marking Decoder](images/about.png)
+*The About tab shows how to use the tool, the license, and the maintainer and project links.*
+
 Developed and maintained by [TheMakersWorkbench.com](https://www.themakersworkbench.com). The [source code is on GitHub](https://github.com/MakersWorkbench/component-marking-decoder), and contributions and corrections are welcome.

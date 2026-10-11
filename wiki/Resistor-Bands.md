@@ -36,6 +36,9 @@ More digits mean a more precise resistor. Five and six band resistors are usuall
 
 ## How do I decode a resistor?
 
+![A 4-band resistor with each band labeled](images/resistor-4band.png)
+*Each band is labeled on the picture (1st Band, 2nd Band, Multiplier, Tolerance), and the results show the value and its range.*
+
 1. Choose **3 Band**, **4 Band**, **5 Band**, or **6 Band** at the top.
 2. Set each dropdown to the color on your resistor, starting from the end where the stripes are closest together.
 3. Read **Resistance**, **Minimum**, and **Maximum**. Minimum and Maximum show the range the real resistor can fall in because of its tolerance. A 6-band resistor also shows its **Temperature coefficient**.
@@ -48,9 +51,15 @@ The picture updates as you pick colors, with each band labeled (1st Band, 2nd Ba
 
 ## What does temperature coefficient mean?
 
+![A 6-band resistor with a temperature coefficient band](images/resistor-6band.png)
+*A 6-band resistor (green, blue, black, orange, violet, red) is 560 kΩ ±0.1% at 50 ppm/K.*
+
 It says how much the resistance drifts when the temperature changes. 50 ppm/K means that for each degree of temperature change, the resistance changes by 50 parts per million. Most projects never need to think about it. It matters in precision measurement circuits.
 
 ## How do I find the colors for a value? (Value to Bands)
+
+![Value to Bands mode showing the bands for 4.7kΩ 1%](images/resistor-value-to-bands.png)
+*Value → Bands mode turns 4.7kΩ 1% into its four colored bands and lists them in order.*
 
 1. Click **Value → Bands**.
 2. Type a value, for example `4.7kΩ 1%`, `4k7`, `220`, or `2.2M`. Add a tolerance like `1%` if you want one. Add `50ppm` to get a 6-band resistor.

@@ -14,6 +14,9 @@ Capacitors come in many types, and each type is marked differently. This tab dec
 
 ## How do I use the tab?
 
+![Capacitor tab decoding 104K with an SMD ceramic picture](images/capacitor-104k.png)
+*Pick the capacitor type, type the marking, and read the value, tolerance, and voltage.*
+
 1. Click **Capacitor**. Leave **Code → Value** selected.
 2. Choose the **type** pill that matches your part, or leave it on **Auto**: SMD ceramic, SMD tantalum, Radial tantalum, SMD electrolytic, Radial electrolytic, Ceramic disc, or Film. The picture and the polarity notes change with the type.
 3. Type the marking.
@@ -64,6 +67,9 @@ Tiny ceramic and tantalum chips sometimes use a letter and a digit. The letter i
 
 ### SMD tantalum
 
+![Capacitor tab decoding the tantalum code 107C](images/capacitor-tantalum-107c.png)
+*107C is a tantalum capacitor: 100 µF at 16 V. The + mark shows the positive end.*
+
 - **Capacitance code first, voltage letter after:** `107C` = 100 µF, C = 16 V. `475A` = 4.7 µF, A = 10 V. `226V` = 22 µF, V = 35 V.
 - **Voltage letter first:** `G475` = 4.7 µF at 4 V.
 - A second line, if there is one, is a lot or date code and can be ignored.
@@ -75,6 +81,9 @@ Large capacitors have room for the value, so they print it. Examples: `100uF 25V
 
 ## How do I tell which end is which? (Polarity)
 
+![Radial electrolytic capacitor with the cathode and anode labeled](images/capacitor-electrolytic.png)
+*On a radial electrolytic, the stripe with minus signs marks the cathode (negative), which is also the shorter lead.*
+
 Ceramic and film capacitors are not polarized, so either way round works. The others are polarized and **reversing them can destroy them**:
 
 - **Tantalum (SMD):** the stripe or bevel marks the **positive** end.
@@ -84,6 +93,9 @@ Ceramic and film capacitors are not polarized, so either way round works. The ot
 The tool draws each type with these markings labeled.
 
 ## Gotchas
+
+![Capacitor tab in Value to Code mode](images/capacitor-value-to-code.png)
+*Value → Code mode turns 100nF into the marking 104.*
 
 - **`107C` could be two things.** A `C` after three digits can be a ceramic tolerance (±0.25 pF) or a tantalum 16 V code. The tool treats it as tantalum when the value is 1 µF or larger. Choose a type to force it.
 - **Bare `100 16`.** Two plain numbers are read as µF and volts, because that is how printed electrolytics look. A 3-digit number not ending in 0 with a voltage, like `104 50`, is read as a ceramic code plus 50 V.
