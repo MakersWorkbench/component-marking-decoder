@@ -75,3 +75,27 @@
 .tmwb-dec .dec-foot{padding:12px 20px;border-top:1px solid var(--line);background:#1d2025;color:var(--mute);font-size:.85rem;text-align:center}
 .tmwb-dec .about h3{margin:16px 0 6px;font-size:1rem;color:var(--ink)}
 .tmwb-dec .about h3:first-child{margin-top:0}
+
+/* header v2 */
+.tmwb-dec .dec-head{position:relative;padding:22px 22px 20px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='220' viewBox='0 0 420 220' fill='none' stroke='white' stroke-opacity='.11' stroke-width='2'%3E%3Cpath d='M0 40h90l20 20h70M180 60h60l25-25h155M0 120h60l25 25h120l20-20h195M300 220v-50l30-30h90M120 0v38'/%3E%3Ccircle cx='90' cy='40' r='4' fill='white' fill-opacity='.14'/%3E%3Ccircle cx='240' cy='60' r='4' fill='white' fill-opacity='.14'/%3E%3Ccircle cx='85' cy='145' r='4' fill='white' fill-opacity='.14'/%3E%3Ccircle cx='330' cy='140' r='4' fill='white' fill-opacity='.14'/%3E%3Ccircle cx='265' cy='35' r='4' fill='white' fill-opacity='.14'/%3E%3C/svg%3E"),linear-gradient(135deg,#0D2B5E 0%,#17458f 55%,#2a73cf 100%);border-bottom:3px solid #4aa3ff;overflow:hidden}
+.tmwb-dec .dec-head::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(74,163,255,.35),transparent 70%);pointer-events:none}
+.tmwb-dec .dec-hero{position:relative;z-index:1;display:flex;align-items:center;gap:16px;margin-bottom:12px}
+.tmwb-dec .dec-logo{flex:0 0 auto;width:68px;height:68px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35))}
+.tmwb-dec .dec-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9fd0ff;margin-bottom:2px}
+.tmwb-dec .dec-head h1{margin:0;font-size:1.85rem;line-height:1.15;font-weight:800;letter-spacing:-.01em;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.tmwb-dec .dec-tag{margin-top:4px;font-size:1.02rem;color:#dcebff}
+.tmwb-dec .dec-intro{position:relative;z-index:1;margin:0 0 12px;max-width:62ch;color:#c9dcf4;font-size:.93rem;line-height:1.55}
+.tmwb-dec .dec-chips{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tmwb-dec .dec-chips span{padding:3px 11px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);color:#eaf3ff;border-radius:999px;font-size:.78rem;font-weight:600;backdrop-filter:blur(2px)}
+.tmwb-dec .dec-head .dec-links{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:10px}
+.tmwb-dec .dec-btn{display:inline-block;padding:8px 16px;border-radius:9px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:#fff;font-size:.9rem;font-weight:600;text-decoration:none;transition:background .15s,transform .15s}
+.tmwb-dec .dec-btn:hover{background:rgba(255,255,255,.2);transform:translateY(-1px)}
+.tmwb-dec .dec-btn-primary{background:#4aa3ff;border-color:#4aa3ff;color:#06121f}
+.tmwb-dec .dec-btn-primary:hover{background:#74b9ff}
+@media (max-width:540px){
+  .tmwb-dec .dec-head{padding:16px 14px 16px}
+  .tmwb-dec .dec-logo{width:54px;height:54px}
+  .tmwb-dec .dec-head h1{font-size:1.4rem}
+  .tmwb-dec .dec-tag{font-size:.9rem}
+  .tmwb-dec .dec-btn{padding:7px 13px;font-size:.85rem}
+}

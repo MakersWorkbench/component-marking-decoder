@@ -722,7 +722,7 @@
   /* ---------- Project info (change these in one place) ---------- */
   var APP = {
     name: 'Component Marking Decoder',
-    intro: 'Read the codes, colors, and markings printed on electronic parts. Pick the tab that matches the part in your hand (resistor, capacitor, inductor, diode, crystal, fuse, and more), then type the marking or choose the colors to see the value, tolerance, rating, and polarity. Resistors, capacitors, and inductors also work in reverse: enter a value and get the marking to look for. Every tab shows a labeled picture of the part and walks through how the code was read.',
+    intro: 'Pick the tab that matches the part in your hand, type the marking or choose the colors, and see the value, tolerance, rating, and polarity. Resistors, capacitors, and inductors also work in reverse: enter a value, get the marking to look for. Every tab shows a labeled picture of the part and the step-by-step working.',
     site: 'https://www.themakersworkbench.com',
     workbench: 'https://www.themakersworkbench.com/virtual-workbench',
     repo: 'https://github.com/MakersWorkbench/component-marking-decoder',
@@ -750,14 +750,23 @@
 
   /* ---------- tab shell ---------- */
   var TABS = [['res', 'Resistor Bands', tabResistor], ['smd', 'SMD Resistor', tabSMD], ['pot', 'Pot / Trimmer', tabPot], ['net', 'Res. Network', tabNetwork], ['cap', 'Capacitor', tabCapacitor], ['tcap', 'Trimmer Cap', tabTrimCap], ['ind', 'Inductor', tabInductor], ['ferr', 'Ferrite Bead', tabFerrite], ['semi', 'Semiconductors', tabParts], ['xtal', 'Crystal / Resonator', tabCrystal], ['mov', 'Varistor', tabVaristor], ['therm', 'Thermistor', tabThermistor], ['fuse', 'Fuse', tabFuse], ['about', 'About', tabAbout]];
+  var LOGO = '<svg class="dec-logo" viewBox="0 0 72 72" role="img" aria-label="Resistor with color bands"><rect x="2" y="2" width="68" height="68" rx="16" fill="#0a2147" stroke="rgba(255,255,255,.28)" stroke-width="2"/>' +
+    '<rect x="8" y="34" width="56" height="5" rx="2.5" fill="#9aa3ad"/>' +
+    '<path d="M20 25 Q14 25 14 31 L14 42 Q14 48 20 48 L24 48 Q27 44 31 44 L41 44 Q45 44 48 48 L52 48 Q58 48 58 42 L58 31 Q58 25 52 25 L48 25 Q45 29 41 29 L31 29 Q27 29 24 25 Z" fill="#e3cb98"/>' +
+    '<rect x="21" y="25" width="5" height="23" fill="#f6d90b"/><rect x="30" y="29" width="5" height="15" fill="#7a3fb5"/><rect x="39" y="29" width="5" height="15" fill="#d62828"/><rect x="50" y="25" width="5" height="23" fill="#cfa72a"/></svg>';
+  var CHIPS = ['Resistors', 'Capacitors', 'Inductors', 'Diodes &amp; transistors', 'Crystals', 'Fuses &amp; protection'];
   root.innerHTML =
-    '<header class="dec-head"><h1>' + esc(APP.name) + '</h1><p>' + esc(APP.intro) + '</p>' +
-    '<nav class="dec-links">' + link(APP.wiki, 'User Guide (Wiki)') + link(APP.repo, 'GitHub') + link(APP.workbench, 'Virtual Workbench') + '</nav></header>' +
+    '<header class="dec-head"><div class="dec-hero">' + LOGO +
+    '<div class="dec-titlewrap"><div class="dec-eyebrow">The Makers Workbench &middot; Free Tool</div><h1>' + esc(APP.name) + '</h1>' +
+    '<div class="dec-tag">Decode the colors, numbers, and markings on electronic parts.</div></div></div>' +
+    '<p class="dec-intro">' + esc(APP.intro) + '</p>' +
+    '<div class="dec-chips">' + CHIPS.map(function (c) { return '<span>' + c + '</span>'; }).join('') + '</div>' +
+    '<nav class="dec-links">' + link(APP.wiki, 'User Guide (Wiki)').replace('<a ', '<a class="dec-btn dec-btn-primary" ') + link(APP.repo, 'GitHub').replace('<a ', '<a class="dec-btn" ') + link(APP.workbench, 'Virtual Workbench').replace('<a ', '<a class="dec-btn" ') + '</nav></header>' +
     '<div class="tabbar" role="tablist"></div><div class="pane" role="tabpanel"></div>' +
     '<footer class="dec-foot">Developed and Maintained by ' + link(APP.site, 'TheMakersWorkbench.com') + ' &middot; ' + link(APP.license, APP.licenseName) + ' &middot; ' + link(APP.repo, 'View the Project on GitHub') + ' &middot; ' + link(APP.wiki, 'User Guide') + '</footer>';
   var bar = $('.tabbar'), pane = $('.pane');
   var solo = /[?&]solo/.test(location.search);
-  if (solo) { bar.hidden = true; $('.dec-head p').hidden = true; $('.dec-links').hidden = true; }   /* the title and footer attribution always stay */
+  if (solo) { bar.hidden = true; ['.dec-intro', '.dec-chips', '.dec-links'].forEach(function (q) { $(q).hidden = true; }); }   /* the title and footer attribution always stay */
   bar.innerHTML = TABS.map(function (t) { return '<button role="tab" data-t="' + t[0] + '">' + t[1] + '</button>'; }).join('');
   function show(id) {
     var t = TABS.filter(function (x) { return x[0] === id; })[0] || TABS[0];
