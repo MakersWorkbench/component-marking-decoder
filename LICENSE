@@ -1,0 +1,47 @@
+TMWB Attribution License (MIT-based)
+
+Copyright (c) 2026 TheMakersWorkbench.com (https://www.themakersworkbench.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software, its data tables, and its associated documentation files (the
+"Software"), to deal in the Software without restriction, including without
+limitation the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, for any purpose, commercial or
+non-commercial, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+1. NOTICE. The above copyright notice and this permission notice shall be
+   included in all copies or substantial portions of the Software.
+
+2. ATTRIBUTION. Every copy, modification, or derivative work of the Software
+   that is distributed, published, or made publicly accessible (including as a
+   website, web application, embedded widget, or part of a larger product)
+   must keep the following attribution visible to end users, unaltered:
+
+       Developed and Maintained by TheMakersWorkbench.com
+
+   The attribution must link to https://www.themakersworkbench.com and must
+   remain together with a reference to this license and a link to the
+   original project repository. It may not be removed, hidden, obscured,
+   reworded, or replaced.
+
+3. MODIFICATIONS AND ADDITIONS. You may modify the Software and add your own
+   features, data, and content. You may add your own copyright or attribution
+   line for your own contributions alongside the required attribution, but
+   you may not remove or diminish the attribution in condition 2 or this
+   license in condition 1.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+SAFETY NOTICE. The component values, ratings, pinouts, and markings in the
+Software are provided for convenience and education. They can differ between
+manufacturers and can contain errors. Always confirm against the datasheet for
+your specific part before using it in a design, and never rely on the Software
+alone for safety-critical decisions (mains voltage, fuses, surge protection,
+and similar).
