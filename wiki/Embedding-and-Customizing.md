@@ -38,6 +38,20 @@ Open `http://localhost:8000` in your browser. You can also open `index.html` dir
 
 All styles are scoped under `.tmwb-dec`, so the tool will not restyle the rest of your page.
 
+## How do I use it on a Drupal site?
+
+The repository includes a Drupal 10 and 11 module, **TMWB Component Identifier**, in the `drupal/tmwb_component_identifier` folder. It is not tied to any site or theme.
+
+1. Copy the folder to `web/modules/custom/tmwb_component_identifier` and enable it (`drush en tmwb_component_identifier`).
+2. On **Configuration > Content authoring > Text formats and editors**, enable **TMWB Component Identifier Embed** on the format your content uses (for example Full HTML). Its settings let you turn the description under the tool and the structured data on or off.
+3. In the content's source, add this where you want the tool, and clear caches:
+
+```html
+<div class="tmwb-component-identifier"></div>
+```
+
+Optional attributes are `data-heading="h2"` (the heading level of the tool's title) and `data-solo="on"` (hide the tab bar and intro). Only one tool can appear on a page. The module's own README has the details.
+
 ## How do I show just one tab?
 
 Add `?solo` and a tab id after the page address, for example `index.html?solo#cap`. The tab bar and intro are hidden and only that tab shows. The title and the attribution footer always stay.

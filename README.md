@@ -51,6 +51,8 @@ Then open `http://localhost:8000`. You can also open `index.html` directly in a 
 
 Copy the folder to your site and include `index.html` in an iframe, or copy the `decoder.css`, `js/`, and the single `<div class="tmwb-dec" id="tmwb-dec"></div>` plus script tags into your page. To show only one tab with no tab bar, link to `index.html?solo#cap` (use `#res`, `#smd`, `#pot`, `#net`, `#cap`, `#tcap`, `#ind`, `#ferr`, `#semi`, `#xtal`, `#mov`, `#therm`, or `#fuse`). The attribution footer always stays. See the [Embedding and Customizing](https://github.com/MakersWorkbench/component-marking-decoder/wiki/Embedding-and-Customizing) wiki page.
 
+**Drupal:** the `drupal/tmwb_component_identifier` folder is a ready-made Drupal 10/11 module (TMWB Component Identifier). It adds a text filter so you can place the tool anywhere in a page with `<div class="tmwb-component-identifier"></div>`. See its [README](drupal/tmwb_component_identifier/README.md).
+
 ## Project layout
 
 ```
@@ -60,6 +62,8 @@ js/app.js         user interface for every tab and the project info block (APP)
 js/resistor-logic.js, smd-logic.js, cap-logic.js, ind-logic.js,
 js/passive-logic.js, xtal-logic.js   decoding logic, no dependencies
 js/parts-data.js  the semiconductor database
+drupal/           the TMWB Component Identifier module for Drupal 10 and 11
+scripts/          sync_drupal_module.py keeps the module's copy of the tool current
 SOURCES.md        where the tables and values were checked
 LICENSE, NOTICE   Apache License 2.0 and the required attribution notices
 wiki/             the User Guide pages (published to the GitHub wiki)

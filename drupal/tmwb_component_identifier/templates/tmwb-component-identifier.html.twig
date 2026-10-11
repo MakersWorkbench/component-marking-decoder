@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Mount point and description for the Component Marking Decoder.
+ *
+ * The tool (assets/js/app.js) builds its own interface inside the mount
+ * element. The description below it is server-rendered so that search
+ * engines, screen readers, and visitors without JavaScript get real text.
+ *
+ * Available variables:
+ * - heading: heading level (h1 to h6) used for the tool's title. Defaults to
+ *   h2 because the page that hosts the tool normally has its own h1.
+ * - solo: when TRUE, show the tool without the tab bar and intro.
+ * - features: array of [label, description] pairs for what the tool decodes.
+ * - show_description: whether to render the description section.
+ */
+#}
+<div class="tmwb-component-identifier-wrapper">
+  <div class="tmwb-dec" id="tmwb-dec" data-heading="{{ heading }}" data-hash="off"{% if solo %} data-solo="on"{% endif %}>
+    <noscript>
+      {{ 'The Component Marking Decoder needs JavaScript. You can read how it works in the <a href="https://github.com/MakersWorkbench/component-marking-decoder/wiki">User Guide</a>.'|t }}
+    </noscript>
+  </div>
+  {% if show_description and features and not solo %}
+    <section class="tmwb-component-identifier-about" aria-labelledby="cmd-about-title">
+      <h3 id="cmd-about-title">{{ 'What the Component Marking Decoder can read'|t }}</h3>
+      <p>{{ 'The Component Marking Decoder is a free tool that decodes the color bands, numbers, and markings printed on electronic parts. Choose the tab for your part, enter the marking or pick the colors, and it shows the value, tolerance, rating, and polarity, with a labeled picture of the part and the steps it used to read the code.'|t }}</p>
+      <ul>
+        {% for feature in features %}
+          <li><strong>{{ feature[0] }}</strong>: {{ feature[1] }}</li>
+        {% endfor %}
+      </ul>
+      <p>{{ 'Values are checked against datasheets and standards, and the tool says where manufacturers differ. Always confirm with the datasheet for your exact part.'|t }}
+        <a href="https://github.com/MakersWorkbench/component-marking-decoder/wiki" target="_blank" rel="noopener noreferrer">{{ 'Read the User Guide'|t }}</a> &middot;
+        <a href="https://github.com/MakersWorkbench/component-marking-decoder" target="_blank" rel="noopener noreferrer">{{ 'Source code on GitHub'|t }}</a>
+      </p>
+    </section>
+  {% endif %}
+</div>

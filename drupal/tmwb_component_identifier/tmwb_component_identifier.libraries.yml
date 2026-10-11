@@ -1,0 +1,22 @@
+decoder:
+  version: 1.0.0
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+    gpl-compatible: false
+  css:
+    component:
+      assets/decoder.css: {}
+      css/tmwb-component-identifier.css: {}
+  js:
+    # The logic files only define globals, so they can load in any position
+    # before app.js. Order matters: app.js reads them all.
+    assets/js/resistor-logic.js: {}
+    assets/js/smd-logic.js: {}
+    assets/js/cap-logic.js: {}
+    assets/js/ind-logic.js: {}
+    assets/js/parts-data.js: {}
+    assets/js/xtal-logic.js: {}
+    assets/js/passive-logic.js: {}
+    # app.js mounts onto #tmwb-dec, so it must run after the markup exists.
+    assets/js/app.js: { attributes: { defer: true } }

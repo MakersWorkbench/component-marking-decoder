@@ -1,0 +1,7 @@
+name: 'TMWB Component Identifier'
+type: module
+description: 'Embeds the Component Marking Decoder (a free tool that decodes the markings on resistors, capacitors, inductors, semiconductors, crystals, fuses, and more) into content through a text filter placeholder.'
+core_version_requirement: ^10 || ^11
+package: TMWB
+dependencies:
+  - drupal:filter
